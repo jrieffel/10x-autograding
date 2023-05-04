@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# Set up autograder files
+
+BASE_DIR=/autograder/10x-autograding/
+
+cd /autograder
+git pull
+
+cp /autograder/submission/*.py $BASE_DIR/
+
+pip install -r $BASE_DIR/requirements.txt
+
+cd $BASE_DIR
+
+python3 run_tests.py > /autograder/results/results.json
