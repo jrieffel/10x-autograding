@@ -17,8 +17,8 @@ git pull
 
 cp /autograder/submission/*.py $BASE_DIR/
 
-pip install -r gradescope-utils
-#pip install -r $BASE_DIR/requirements.txt
+#pip install gradescope-utils
+pip install -r $BASE_DIR/requirements.txt
 
 cd $BASE_DIR
 
