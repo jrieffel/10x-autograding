@@ -2,7 +2,7 @@
 
 # Set up autograder files
 
-BASE_DIR=/autograder/source/
+BASE_DIR=/autograder/source/10x-autograding
 
 
 pwd
