@@ -37,7 +37,7 @@ class TestWeek8(unittest.TestCase):
         testval1 = [1,2,3,4,5]
         expected = 15
         msg = "Sum100([1,2,3,4,5]) should return 15"
-        result = TestWeek8.STUDENT[funName](testval1,testval2)
+        result = TestWeek8.STUDENT[funName](testval1)
         self.assertEqual(result, expected, msg=msg)
 
 
