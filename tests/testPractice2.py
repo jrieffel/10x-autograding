@@ -42,11 +42,23 @@ class TestWeek8(unittest.TestCase):
     @weight(1)
     def test_sum_100_2(self):
         ''' 
-        this should not print
+        Sum100([20,20,50]) should return 90
         '''
         funName = 'Sum100'
         testval1 = [20,20,50]
         expected = 90 
+        msg = funName + "(" + str(testval1) + ") should return" + str(expected)
+        result = TestWeek8.STUDENT[funName](testval1)
+        self.assertEqual(result, expected, msg=msg)
+
+    @weight(1)
+    def test_sum_100_3(self):
+        ''' 
+        Sum100([1000]) should return 1000
+        '''
+        funName = 'Sum100'
+        testval1 = [1000]
+        expected = 1000 
         msg = funName + "(" + str(testval1) + ") should return" + str(expected)
         result = TestWeek8.STUDENT[funName](testval1)
         self.assertEqual(result, expected, msg=msg)
