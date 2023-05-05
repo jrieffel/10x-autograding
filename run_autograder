@@ -22,4 +22,6 @@ pip install -r $BASE_DIR/requirements.txt
 
 cd $BASE_DIR
 
+echo "running autograder"
+
 python3 run_tests.py > /autograder/results/results.json
