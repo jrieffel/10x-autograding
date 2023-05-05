@@ -17,7 +17,7 @@ class TestWeek8(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
          try:
-             student_code = open('practice-quiz-2.py','rt').read()
+             student_code = open('practiceQuiz2.py','rt').read()
              student_code = student_code.split(cls.MARKER)[0]
              exec(student_code, cls.STUDENT)
          except:
@@ -37,7 +37,7 @@ class TestWeek8(unittest.TestCase):
         testval1 = [1,2,3,4,5]
         expected = 15
         msg = "Sum100([1,2,3,4,5]) should return 15"
-        result = TestWeek8.STUDENT[Sum100](testval1,testval2)
+        result = TestWeek8.STUDENT[funName](testval1,testval2)
         self.assertEqual(result, expected, msg=msg)
 
 
