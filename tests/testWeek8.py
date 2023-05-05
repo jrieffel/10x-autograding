@@ -17,7 +17,7 @@ class TestWeek8(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
          try:
-             student_code = open('quiz3.py','rt').read()
+             student_code = open('Week8.py','rt').read()
              student_code = student_code.split(cls.MARKER)[0]
              exec(student_code, cls.STUDENT)
          except:
