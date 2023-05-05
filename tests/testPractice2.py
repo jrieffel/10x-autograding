@@ -119,4 +119,15 @@ class TestWeek8(unittest.TestCase):
        expected = [55, 30, 46, 100, 50]
        result = TestWeek8.STUDENT[funName](testval1)
        self.assertEqual(result, expected) 
-     
+
+    @weight(1)
+    def test_sort(self):
+       '''
+       SelectionSort
+       '''
+       funName = 'SelectionSort'
+       testval1 = [3,1,4,1,5,9,2,6,5]
+       expected = testval[:]
+       expected.sort()
+       result = TestWeek8.STUDENT[funName](testval1)
+       self.assertEqual(result, expected) 
