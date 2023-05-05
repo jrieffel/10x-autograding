@@ -26,6 +26,16 @@ class TestWeek8(unittest.TestCase):
 
 
 
+    @weight(1)
+    def test_only_odds(self):
+        '''
+        OnlyOdds([1,2,3,4,5]) should return [1,3,5]
+        '''
+        funName = 'OnlyOdds'
+        testval1 = [1,2,3,4,5]
+        expected = [1,3,5]
+        result = TestWeek8.STUDENT[funName](testval1)
+        self.assertEqual(result, expected) 
 
     @weight(1)
     def test_sum_100(self):
@@ -63,7 +73,13 @@ class TestWeek8(unittest.TestCase):
         result = TestWeek8.STUDENT[funName](testval1)
         self.assertEqual(result, expected, msg=msg)
 
-
+    @weight(1)
+    def test_class_average(self):
+       funName = 'ClassAverage'
+       testval1 = [10,20,30]
+       expected = 20.0
+       result = TestWeek8.STUDENT[funName](testval1)
+       self.assertEqual(result, expected) 
 
 
 
