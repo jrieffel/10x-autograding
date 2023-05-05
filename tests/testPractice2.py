@@ -127,7 +127,7 @@ class TestWeek8(unittest.TestCase):
        '''
        funName = 'SelectionSort'
        testval1 = [3,1,4,1,5,9,2,6,5]
-       expected = testval[:]
+       expected = testval1[:]
        expected.sort()
        result = TestWeek8.STUDENT[funName](testval1)
        self.assertEqual(result, expected) 
