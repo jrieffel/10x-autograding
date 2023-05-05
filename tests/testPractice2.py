@@ -75,14 +75,48 @@ class TestWeek8(unittest.TestCase):
 
     @weight(1)
     def test_class_average(self):
+       '''
+       ClassAverage([10,20,30]) should be 20.0
+       '''
        funName = 'ClassAverage'
        testval1 = [10,20,30]
        expected = 20.0
        result = TestWeek8.STUDENT[funName](testval1)
        self.assertEqual(result, expected) 
 
+    @weight(1)
+    def test_adjust_grades(self):
+       '''
+       AdjustGrades([10,20,30],20) --> [30, 40, 50]
+       '''
+       funName = 'AdjustGrades'
+       testval1 = [10,20,30]
+       testval2 = 20
+       expected = [30,40,50]
+       result = TestWeek8.STUDENT[funName](testval1,testval2)
+       self.assertEqual(result, expected) 
 
 
+    @weight(1)
+    def test_curve_grades(self):
+       '''
+       CurveGrades([85,62,70,30]) -> [100, 77, 85, 45]
+       '''
+       funName = 'CurveGrades'
+       testval1 = [85,62,70,30] 
+       expected = [100, 77, 85, 45]
+       result = TestWeek8.STUDENT[funName](testval1)
+       self.assertEqual(result, expected) 
 
 
+    @weight(1)
+    def test_curve_grades2(self):
+       '''
+       CurveGrades([85,60,76,130,80]) -> [55, 30, 46, 100, 50]
+       '''
+       funName = 'CurveGrades'
+       testval1 = [85,60,76,130,80]
+       expected = [55, 30, 46, 100, 50]
+       result = TestWeek8.STUDENT[funName](testval1)
+       self.assertEqual(result, expected) 
      
